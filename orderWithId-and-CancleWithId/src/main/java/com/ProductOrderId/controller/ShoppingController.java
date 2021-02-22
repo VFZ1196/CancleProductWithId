@@ -36,7 +36,6 @@ public class ShoppingController {
 	}
 
 	@GetMapping("/shopping/{id}")
-	@Transactional(timeout = 20)
 	public Shopping getOne(@PathVariable int id) {
 		return shoppingRepository.findById(id).get();
 	}
